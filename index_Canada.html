@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加拿大矿山指标</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+</head>
+<body>
+   <header>
+       <h1 class="titleTag">加拿大矿山指标</h1>
+       <div class="showTime"></div>
+    <script>
+        var t = null;
+        t = setTimeout(time,1000);  //开始运行
+        function time(){
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours();
+            var m = dt.getMinutes();
+            var s = dt.getSeconds();
+            document.querySelector(".showTime").innerHTML = '当前时间' + y + '年' + mt + '月' + day + '日' + '-' + h + '时' + m + '分' + s + '秒';
+            t = setTimeout(time,1000); //设定定时器，循环运行
+        }
+        // var buttonMine = document.querySelector(".button_mine")            
+        // var buttonProcess = document.querySelector(".button_process")
+        var titleName = ["湖山铀矿生产指标", "谢米兹拜伊矿山生产指标", "伊尔科利矿山生产指标", "加拿大矿山勘探指标", "EME矿山勘探指标"]
+        var titleNav = ["Namibia", "Semizbai", "Ileley", "Canada", "Australia"]
+        // var idArray = ["leftTop", "leftMiddle", "leftBottom", "rightTop", "rightMiddle", "rightBottom"]
+        // var idArray_process = ["leftTop_process", "leftMiddle_process", "leftBottom_process", "rightTop_process", "rightMiddle_process", "rightBottom_process"];
+        // var idArray_mine = ["leftTop_mine", "leftMiddle_mine", "leftBottom_mine", "rightTop_mine", "rightMiddle_mine", "rightBottom_mine"];
+        
+        // 手动加载需要的js文件
+        function addScript(url){
+            var script = document.createElement('script');
+            script.setAttribute('type','text/javascript');
+            script.setAttribute('src',url);
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+        // buttonMine.onclick = function () {
+        //     var titleTag_mine = document.querySelector(".titleTag")
+        //     console.dir(titleTag_mine.innerHTML)
+
+        //     for (var i =0; i < 5; i++) {
+        //         if (titleTag_mine.innerHTML == titleName[i]) {
+        //             window.location.href='index_' + titleNav[i] + '.html'
+        //             addScript('js/index_mine_'+ titleNav[i] + '.js');
+        //         }
+        //     }
+        //     // 这段的意思是通过循环将六个图表对应的class名字进行更改
+        //     // for (var i = 0; i < 6; i++) {
+        //     //     let classAtr1 = document.getElementById(idArray[i]).getAttribute("class")
+        //     //     let newClass1 = classAtr1.replace(idArray_process[i], idArray_mine[i])
+        //     //     document.getElementById(idArray[i]).setAttribute("class", newClass1)
+        //     //     addScript("js/index_mine.js")
+        //     //     let myChart = echarts.init(document.querySelector("." + idArray_process[i]))
+        //     //     myChart.clear()
+        //     // }
+        //     // addScript("js/index_mine.js")
+        //     // myChart.setOption(option,true)
+        // }
+        // buttonProcess.onclick = function () {
+        //     var titleTag_process = document.querySelector(".titleTag")
+        //     console.dir(titleTag_process.innerHTML)
+
+        //     for (var i =0; i < 5; i++) {
+        //         if (titleTag_process.innerHTML == titleName[i]) {
+        //             window.location.href='index_process_' + titleNav[i] + '.html'
+        //             addScript('js/index_process_' + titleNav[i] + '.js');
+        //         }
+        //     }
+        //     // var myChart = echarts.init(document.querySelector(".leftTop_mine .chart"));
+        //     // myChart.clear()
+        //     // 这段的意思是通过循环将六个图表对应的class名字进行更改
+        //     // for (var j = 0; j < 6; j++) {
+        //     //     let classAtr2 = document.getElementById(idArray[j]).getAttribute("class")
+        //     //     let newClass2 = classAtr2.replace(idArray_mine[j], idArray_process[j])
+        //     //     document.getElementById(idArray[j]).setAttribute("class", newClass2)    
+        //     // }
+        //     // addScript("js/index_process.js");
+        // }
+        
+        
+    </script>
+   </header>
+   <!-- 页面主体部分 -->
+   <section class="mainbox">
+        <!-- 左侧部分 -->
+        <div class="column">
+            <!-- <div class="panel leftTop_mine" id="leftTop">
+                <h2>采矿指标-剥采量 矿石量</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>    
+            </div>
+            <div class="panel leftMiddle_mine" id="leftMiddle">
+                <h2>采矿指标-液压铲可动率 实动率</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel leftBottom_mine" id="leftBottom">
+                <h2>采矿指标-液压铲装载效率</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div> -->
+        </div>
+        <!-- 中间部分 -->
+        <div class="column">
+            <!-- no模块制作 -->
+            <div class="no">
+                <div class="no-hd"><span class="missInfo">处于勘探阶段，数据暂缺</span></div>
+                <!-- <div class="no-bd">
+                    <ul>
+                        <li>剥采量，万吨</li>
+                        <li>矿石量，万吨</li>
+                        <li>磨矿量，万吨</li>
+                        <li>产品量，吨</li>
+                    </ul>
+                </div> -->
+            </div>
+            <!-- 地图模块制作 -->
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <!-- 右侧部分 -->
+        <div class="column">
+            <!-- <div class="panel rightTop_mine" id="rightTop">
+                <h2>采矿指标-贫化率 损失率</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel rightMiddle_mine" id="rightMiddle">
+                <h2>采矿指标-电铲可动率 实动率</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel rightBottom_mine" id="rightBottom">
+                <h2>采矿指标-电铲装载效率</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div> -->
+        </div>
+   </section>
+   
+<script src="js/lib-flexible-2.0/index.js"></script>
+<script src="js/Echarts - dist/echarts.min.js"></script>
+<script src="js/jquery-3.5.1/jquery-3.5.1.js"></script>
+<script src="js/china.js"></script>
+<script src="js/data.js"></script>
+<script src="js/index_Canada.js"></script>
+</body>
+</html>
