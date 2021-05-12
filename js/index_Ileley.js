@@ -33475,10 +33475,14 @@
                 let arrayCompany = ["加拿大矿山勘探指标", "湖山铀矿生产指标", "谢米兹拜伊矿山生产指标", "伊尔科利矿山生产指标", "EME矿山勘探指标"]   
                 for (var i = 0; i < 5; i++) {
                     if (arg.data.name == arraySite[i]) {
-                        console.log(333)
-                        console.log(i)
+                        if (arg.data.name == "纳米比亚") {
+                            window.location.href='index.html'
+                        }
+                        else {
                         window.location.href='index_' + arrayHtml[i] + '.html'
                         console.log(document.querySelector(".titleTag").innerHTML) = arrayCompany[i]
+                        }
+                        
                     }
                 }
                 

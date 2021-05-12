@@ -47,13 +47,15 @@
         buttonMine.onclick = function () {
             var titleTag_mine = document.querySelector(".titleTag")
             console.dir(titleTag_mine.innerHTML)
+            window.location.href = 'index.html'
+            addScript('js/index_mine_Namibia.js')
 
-            for (var i =0; i < 5; i++) {
-                if (titleTag_mine.innerHTML == titleName[i]) {
-                    window.location.href='index_' + titleNav[i] + '.html'
-                    addScript('js/index_mine_'+ titleNav[i] + '.js');
-                }
-            }
+            // for (var i =0; i < 5; i++) {
+            //     if (titleTag_mine.innerHTML == titleName[i]) {
+            //         window.location.href='index_' + titleNav[i] + '.html'
+            //         addScript('js/index_mine_'+ titleNav[i] + '.js');
+            //     }
+            // }
             // 这段的意思是通过循环将六个图表对应的class名字进行更改
             // for (var i = 0; i < 6; i++) {
             //     let classAtr1 = document.getElementById(idArray[i]).getAttribute("class")
@@ -69,13 +71,15 @@
         buttonProcess.onclick = function () {
             var titleTag_process = document.querySelector(".titleTag")
             console.dir(titleTag_process.innerHTML)
+            window.location.href='index_process_Namibia.html'
+            addScript('js/index_process_Namibia.js')
 
-            for (var i =0; i < 5; i++) {
-                if (titleTag_process.innerHTML == titleName[i]) {
-                    window.location.href='index_process_' + titleNav[i] + '.html'
-                    addScript('js/index_process_' + titleNav[i] + '.js');
-                }
-            }
+            // for (var i =0; i < 5; i++) {
+            //     if (titleTag_process.innerHTML == titleName[i]) {
+            //         window.location.href='index_process_' + titleNav[i] + '.html'
+            //         addScript('js/index_process_' + titleNav[i] + '.js');
+            //     }
+            // }
             // var myChart = echarts.init(document.querySelector(".leftTop_mine .chart"));
             // myChart.clear()
             // 这段的意思是通过循环将六个图表对应的class名字进行更改
