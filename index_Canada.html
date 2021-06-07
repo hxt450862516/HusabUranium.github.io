@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>加拿大矿山指标</title>
+    <title>Fission矿山指标</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
 </head>
 <body>
    <header>
-       <h1 class="titleTag">加拿大矿山指标</h1>
+       <h1 class="titleTag">Fission矿山指标</h1>
        <div class="showTime"></div>
     <script>
+        // 根据电脑分辨率动态改变背景图片的大小
+        (function () {
+            if (screen.width = 1366) {
+                document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg1.jpg")'
+            }
+            else if (screen.width = 1920) {
+                document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg.jpg")'
+            }
+        })()
         var t = null;
         t = setTimeout(time,1000);  //开始运行
         function time(){
@@ -28,11 +37,9 @@
         }
         // var buttonMine = document.querySelector(".button_mine")            
         // var buttonProcess = document.querySelector(".button_process")
-        var titleName = ["湖山铀矿生产指标", "谢米兹拜伊矿山生产指标", "伊尔科利矿山生产指标", "加拿大矿山勘探指标", "EME矿山勘探指标"]
-        var titleNav = ["Namibia", "Semizbai", "Ileley", "Canada", "Australia"]
-        // var idArray = ["leftTop", "leftMiddle", "leftBottom", "rightTop", "rightMiddle", "rightBottom"]
-        // var idArray_process = ["leftTop_process", "leftMiddle_process", "leftBottom_process", "rightTop_process", "rightMiddle_process", "rightBottom_process"];
-        // var idArray_mine = ["leftTop_mine", "leftMiddle_mine", "leftBottom_mine", "rightTop_mine", "rightMiddle_mine", "rightBottom_mine"];
+        // 从data.js中引入全局参数，统一修改
+        var titleName = titleName 
+        var titleNav = titleNav
         
         // 手动加载需要的js文件
         function addScript(url){
@@ -42,50 +49,6 @@
             document.getElementsByTagName('head')[0].appendChild(script);
         }
 
-        // buttonMine.onclick = function () {
-        //     var titleTag_mine = document.querySelector(".titleTag")
-        //     console.dir(titleTag_mine.innerHTML)
-
-        //     for (var i =0; i < 5; i++) {
-        //         if (titleTag_mine.innerHTML == titleName[i]) {
-        //             window.location.href='index_' + titleNav[i] + '.html'
-        //             addScript('js/index_mine_'+ titleNav[i] + '.js');
-        //         }
-        //     }
-        //     // 这段的意思是通过循环将六个图表对应的class名字进行更改
-        //     // for (var i = 0; i < 6; i++) {
-        //     //     let classAtr1 = document.getElementById(idArray[i]).getAttribute("class")
-        //     //     let newClass1 = classAtr1.replace(idArray_process[i], idArray_mine[i])
-        //     //     document.getElementById(idArray[i]).setAttribute("class", newClass1)
-        //     //     addScript("js/index_mine.js")
-        //     //     let myChart = echarts.init(document.querySelector("." + idArray_process[i]))
-        //     //     myChart.clear()
-        //     // }
-        //     // addScript("js/index_mine.js")
-        //     // myChart.setOption(option,true)
-        // }
-        // buttonProcess.onclick = function () {
-        //     var titleTag_process = document.querySelector(".titleTag")
-        //     console.dir(titleTag_process.innerHTML)
-
-        //     for (var i =0; i < 5; i++) {
-        //         if (titleTag_process.innerHTML == titleName[i]) {
-        //             window.location.href='index_process_' + titleNav[i] + '.html'
-        //             addScript('js/index_process_' + titleNav[i] + '.js');
-        //         }
-        //     }
-        //     // var myChart = echarts.init(document.querySelector(".leftTop_mine .chart"));
-        //     // myChart.clear()
-        //     // 这段的意思是通过循环将六个图表对应的class名字进行更改
-        //     // for (var j = 0; j < 6; j++) {
-        //     //     let classAtr2 = document.getElementById(idArray[j]).getAttribute("class")
-        //     //     let newClass2 = classAtr2.replace(idArray_mine[j], idArray_process[j])
-        //     //     document.getElementById(idArray[j]).setAttribute("class", newClass2)    
-        //     // }
-        //     // addScript("js/index_process.js");
-        // }
-        
-        
     </script>
    </header>
    <!-- 页面主体部分 -->
@@ -112,7 +75,9 @@
         <div class="column">
             <!-- no模块制作 -->
             <div class="no">
-                <div class="no-hd"><span class="missInfo">处于勘探阶段，数据暂缺</span></div>
+                <div class="no-hd">
+                    <span class="missInfo">中方占股19.89%，位于加拿大萨斯喀彻温省，高级勘探项目，资源量6.2万吨U3O8，平均品位1.5%，已完成预可研工作，计划2021年开展可研工作。</span>
+                </div>
                 <!-- <div class="no-bd">
                     <ul>
                         <li>剥采量，万吨</li>
@@ -156,5 +121,6 @@
 <script src="js/china.js"></script>
 <script src="js/data.js"></script>
 <script src="js/index_Canada.js"></script>
+<script src="js/index_map.js"></script>
 </body>
 </html>

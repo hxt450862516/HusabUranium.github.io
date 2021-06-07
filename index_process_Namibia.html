@@ -14,6 +14,15 @@
        <button class='button_process'><span>水冶</span></button>
        <div class="showTime"></div>
     <script>
+        // 根据电脑分辨率动态改变背景图片的大小
+        (function () {
+            if (screen.width = 1366) {
+                document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg1.jpg")'
+            }
+            else if (screen.width = 1920) {
+                document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg.jpg")'
+            }
+        })()
         var t = null;
         t = setTimeout(time,1000);  //开始运行
         function time(){
@@ -31,8 +40,9 @@
         var buttonMine = document.querySelector(".button_mine")            
         var buttonProcess = document.querySelector(".button_process")
         var flag = 0;
-        var titleName = ["湖山铀矿生产指标", "谢米兹拜伊矿山生产指标", "伊尔科利矿山生产指标", "加拿大矿山勘探指标", "EME矿山勘探指标"]
-        var titleNav = ["Namibia", "Semizbai", "Ileley", "Canada", "Australia"]
+        // 从data.js中引入全局参数，统一修改
+        var titleName = titleName 
+        var titleNav = titleNav
         // var idArray = ["leftTop", "leftMiddle", "leftBottom", "rightTop", "rightMiddle", "rightBottom"]
         // var idArray_process = ["leftTop_process", "leftMiddle_process", "leftBottom_process", "rightTop_process", "rightMiddle_process", "rightBottom_process"];
         // var idArray_mine = ["leftTop_mine", "leftMiddle_mine", "leftBottom_mine", "rightTop_mine", "rightMiddle_mine", "rightBottom_mine"];
@@ -135,6 +145,9 @@
                         <li>产品量，吨</li>
                     </ul>
                 </div>
+                <div class="description">
+                    <span>中方占股54%， 在产项目，资源量25.56万吨U3O8，已累计生产1.23万吨U3O8。</span>
+                </div>
             </div>
             <!-- 地图模块制作 -->
             <div class="map">
@@ -169,5 +182,6 @@
 <script src="js/china.js"></script>
 <script src="js/data.js"></script>
 <script src="js/index_process_Namibia.js"></script>
+<script src="js/index_map.js"></script>
 </body>
 </html>

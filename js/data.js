@@ -43,6 +43,10 @@ var t7 = preMonth7 + '月' + preDay7 + '日';
 
 var xTime = [t7, t6, t5, t4, t3, t2, t1];
 
+// 全局参数
+var titleName = ["湖山铀矿生产指标", "谢米兹拜伊矿山生产指标", "伊尔科利矿山生产指标", "加拿大矿山指标", "EME矿山指标", "麻楼矿山指标", "萨瓦甫齐矿山指标"]
+var titleNav = ["Namibia", "Semizbai", "Ileley", "Canada", "Australia", "Guangdong", "Xinjiang"]
+
 // 湖山铀矿采矿数据
 var mineData = [
     {
