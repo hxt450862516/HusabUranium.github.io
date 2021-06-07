@@ -11,7 +11,7 @@ li {
   src: url(../font/DS-DIGIT.TTF);
 }
 body {
-  background: no-repeat top center;
+  background: url(../images/bg.jpg) no-repeat top center;
   line-height: 1.15;
 }
 header {
