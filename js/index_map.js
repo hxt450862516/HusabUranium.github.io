@@ -32977,8 +32977,11 @@
                 for (var i = 0; i < arraySite.length; i++) {
                     if (arg.data.name == arraySite[i]) {
                         if (arg.data.name == "纳米比亚") {
-                            window.location.href='index.html'
+                            window.location.href='index_mine_Namibia.html'
                         }
+                        // else if (arg.data.name == "北京") {
+                        //     window.location.href='index.html'
+                        // }
                         else {
                             window.location.href='index_' + arrayHtml[i] + '.html'
                             console.log(document.querySelector(".titleTag").innerHTML) = arrayCompany[i]

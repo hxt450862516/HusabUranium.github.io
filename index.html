@@ -3,26 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>湖山铀矿生产指标</title>
+    <title>中广核铀业发展公司简介</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
 </head>
 <body>
    <header>
-       <h1 class="titleTag">湖山铀矿生产指标</h1>
-       <button class='button_mine'><span>采矿</span></button>
-       <button class='button_process'><span>水冶</span></button>
+       <h1 class="titleTag">中广核铀业发展公司简介</h1>
+       <button class='button_detail'><span>详情</span></button>
        <div class="showTime"></div>
     <script>
-        // // 根据电脑分辨率动态改变背景图片的大小
-        // (function () {
-        //     if (screen.width = 1366) {
-        //         document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg1.jpg")'
-        //     }
-        //     else if (screen.width = 1920) {
-        //         document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg.jpg")'
-        //     }
-        // })()
         var t = null;
         t = setTimeout(time,1000);  //开始运行
         function time(){
@@ -37,15 +27,7 @@
             document.querySelector(".showTime").innerHTML = '当前时间' + y + '年' + mt + '月' + day + '日' + '-' + h + '时' + m + '分' + s + '秒';
             t = setTimeout(time,1000); //设定定时器，循环运行
         }
-        var buttonMine = document.querySelector(".button_mine")            
-        var buttonProcess = document.querySelector(".button_process")
-        // 从data.js中引入全局参数，统一修改
-        var titleName = titleName 
-        var titleNav = titleNav
-        // var idArray = ["leftTop", "leftMiddle", "leftBottom", "rightTop", "rightMiddle", "rightBottom"]
-        // var idArray_process = ["leftTop_process", "leftMiddle_process", "leftBottom_process", "rightTop_process", "rightMiddle_process", "rightBottom_process"];
-        // var idArray_mine = ["leftTop_mine", "leftMiddle_mine", "leftBottom_mine", "rightTop_mine", "rightMiddle_mine", "rightBottom_mine"];
-        
+        var buttonDetail = document.querySelector(".button_detail")  
         // 手动加载需要的js文件
         function addScript(url){
             var script = document.createElement('script');
@@ -53,126 +35,35 @@
             script.setAttribute('src',url);
             document.getElementsByTagName('head')[0].appendChild(script);
         }
-
-        buttonMine.onclick = function () {
+        buttonDetail.onclick = function () {
             var titleTag_mine = document.querySelector(".titleTag")
             console.dir(titleTag_mine.innerHTML)
-            window.location.href = 'index.html'
-            addScript('js/index_mine_Namibia.js')
-
-            // for (var i =0; i < 5; i++) {
-            //     if (titleTag_mine.innerHTML == titleName[i]) {
-            //         window.location.href='index_' + titleNav[i] + '.html'
-            //         addScript('js/index_mine_'+ titleNav[i] + '.js');
-            //     }
-            // }
-            // 这段的意思是通过循环将六个图表对应的class名字进行更改
-            // for (var i = 0; i < 6; i++) {
-            //     let classAtr1 = document.getElementById(idArray[i]).getAttribute("class")
-            //     let newClass1 = classAtr1.replace(idArray_process[i], idArray_mine[i])
-            //     document.getElementById(idArray[i]).setAttribute("class", newClass1)
-            //     addScript("js/index_mine.js")
-            //     let myChart = echarts.init(document.querySelector("." + idArray_process[i]))
-            //     myChart.clear()
-            // }
-            // addScript("js/index_mine.js")
-            // myChart.setOption(option,true)
-        }   
-        buttonProcess.onclick = function () {
-            var titleTag_process = document.querySelector(".titleTag")
-            console.dir(titleTag_process.innerHTML)
-            window.location.href='index_process_Namibia.html'
-            addScript('js/index_process_Namibia.js')
-
-            // for (var i =0; i < 5; i++) {
-            //     if (titleTag_process.innerHTML == titleName[i]) {
-            //         window.location.href='index_process_' + titleNav[i] + '.html'
-            //         addScript('js/index_process_' + titleNav[i] + '.js');
-            //     }
-            // }
-            // var myChart = echarts.init(document.querySelector(".leftTop_mine .chart"));
-            // myChart.clear()
-            // 这段的意思是通过循环将六个图表对应的class名字进行更改
-            // for (var j = 0; j < 6; j++) {
-            //     let classAtr2 = document.getElementById(idArray[j]).getAttribute("class")
-            //     let newClass2 = classAtr2.replace(idArray_mine[j], idArray_process[j])
-            //     document.getElementById(idArray[j]).setAttribute("class", newClass2)    
-            // }
-            // addScript("js/index_process.js");
+            window.location.href='index_mine_Namibia.html'
+            addScript("js/index_mine_Namibia.js")
         }
-        
-        
+        setTimeout('window.location.replace("index_mine_Namibia.html")',600000);
     </script>
    </header>
    <!-- 页面主体部分 -->
    <section class="mainbox">
-        <!-- 左侧部分 -->
-        <div class="column">
-            <div class="panel leftTop_mine" id="leftTop">
-                <h2>采矿指标-剥采量 矿石量</h2>
-                <div class="chart"></div>
-                <div class="panel-footer"></div>    
-            </div>
-            <div class="panel leftMiddle_mine" id="leftMiddle">
-                <h2>采矿指标-液压铲可动率 实动率</h2>
-                <div class="chart"></div>
-                <div class="panel-footer"></div>
-            </div>
-            <div class="panel leftBottom_mine" id="leftBottom">
-                <h2>采矿指标-液压铲装载效率</h2>
-                <div class="chart"></div>
-                <div class="panel-footer"></div>
-            </div>
-        </div>
         <!-- 中间部分 -->
         <div class="column">
             <!-- no模块制作 -->
             <div class="no">
                 <div class="no-hd">
-                    <ul>
-                        <li class="lis">2711</li>
-                        <li>454</li>
-                        <li>282</li>
-                        <li>989</li>
-                    </ul>
-                </div>
-                <div class="no-bd">
-                    <ul>
-                        <li>剥采量，万吨</li>
-                        <li>矿石量，万吨</li>
-                        <li>磨矿量，万吨</li>
-                        <li>产品量，吨</li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <span>中方占股54%， 在产项目，资源量25.56万吨U3O8，已累计生产1.23万吨U3O8。</span>
-                </div>
+                    <div><span class="frontPageInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp中广核铀业发展有限公司承担核电站全寿期核燃料供应与技术服务任务，是专业化的核燃料供应平台，致力于为全球客户提供经济可靠的天然铀、核燃料循环产品与服务。
+                        截至2020年底，公司员工总数2044人，在境外工作的员工1670人，占比82%。拥有10家实体化运作的下属子公司（控股6家，参股4家；境内2家，境外8家）。
+                        目前基本完成在中亚、澳洲、非洲、北美等全球四大富铀地区的战略布局。控制铀资源储量14万tU，全球第四。天然铀控制产量3900tU/年，全球前五。</span></div>
+                    <div><span class="frontPageInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp纳米比亚斯科公司：湖山铀矿是全球在产第二大铀矿山，也是全球设施规模最大的露天铀矿。
+                        湖山铀矿可持续稳定生产超过20年，对保障我国铀资源具有重要意义，是我国核电发展的“粮仓”。湖山铀矿是迄今中国在非洲最大的实业投资项目，也是中非经贸合作的标志性工程，项目开发给纳米比亚带来了巨大的经济和社会效益。</span></div>
+                    <div><span class="frontPageInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp哈萨克斯坦谢公司：铀业公司与哈原工合资成立了谢米兹拜伊铀有限责任合伙企业，是中国首家海外铀矿开采合资企业。
+                        谢公司拥有谢米兹拜伊和伊尔科利2个铀矿，开采方式为原地浸出，成本远低于常规开采。目前生产运营情况良好，累计运回国内天然铀产品9000余吨，是中哈两国企业合作的典范。</span></div>
+                    <div><span class="frontPageInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp澳大利亚EME公司：中广核收购澳大利亚能源金属公司（EME公司），目前持股比例66.45%。截至目前，中广核在EME公司累计投入超过1亿澳元。
+                        EME公司在澳洲拥有8个铀矿勘查项目，其中3个位于北领地，5个位于西澳洲，总面积近3200平方公里，总资源量约3万吨U3O8。受铀价市场低迷影响，EME公司各项目尚处于勘查阶段，尚未进入矿建，当前主要开展矿权维护工作。</span></div>
+                        <div><span class="frontPageInfo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp加拿大Fission公司：PLS（帕特森湖南）项目资源量6.2万吨U3O8，平均品位1.5%，是全球铀矿平均工业品位（300ppm）的50倍。
+                            矿体埋深50-300米，是全球最大可露天开采的待开发高品位铀矿项目。2019年完成项目预可研工作，拟采用“露天+地采”开采方式，计划2021年开展可研。</span></div>
+                    </div>
             </div>
-            <!-- 地图模块制作 -->
-            <div class="map">
-                <div class="map1"></div>
-                <div class="map2"></div>
-                <div class="map3"></div>
-                <div class="chart"></div>
-                
-            </div>
-        </div>
-        <!-- 右侧部分 -->
-        <div class="column">
-            <div class="panel rightTop_mine" id="rightTop">
-                <h2>采矿指标-贫化率 损失率</h2>
-                <div class="chart"></div>
-                <div class="panel-footer"></div>
-            </div>
-            <div class="panel rightMiddle_mine" id="rightMiddle">
-                <h2>采矿指标-电铲可动率 实动率</h2>
-                <div class="chart"></div>
-                <div class="panel-footer"></div>
-            </div>
-            <div class="panel rightBottom_mine" id="rightBottom">
-                <h2>采矿指标-电铲装载效率</h2>
-                <div class="chart"></div>
-                <div class="panel-footer"></div>
             </div>
         </div>
    </section>
@@ -180,10 +71,5 @@
 <script src="js/lib-flexible-2.0/index.js"></script>
 <script src="js/Echarts - dist/echarts.min.js"></script>
 <script src="js/jquery-3.5.1/jquery-3.5.1.js"></script>
-<script src="js/china.js"></script>
-<script src="js/data.js"></script>
-<script src="js/index_mine_Namibia.js"></script>
-<script src="js/index_map.js"></script>
-
 </body>
 </html>

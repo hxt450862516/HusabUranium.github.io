@@ -12,15 +12,15 @@
        <h1 class="titleTag">EME矿山指标</h1>
        <div class="showTime"></div>
     <script>
-        // 根据电脑分辨率动态改变背景图片的大小
-        (function () {
-            if (screen.width = 1366) {
-                document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg1.jpg")'
-            }
-            else if (screen.width = 1920) {
-                document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg.jpg")'
-            }
-        })()
+        // // 根据电脑分辨率动态改变背景图片的大小
+        // (function () {
+        //     if (screen.width = 1366) {
+        //         document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg1.jpg")'
+        //     }
+        //     else if (screen.width = 1920) {
+        //         document.body.style.backgroundImage = 'url("../ECharts_Uranium/images/bg.jpg")'
+        //     }
+        // })()
         var t = null;
         t = setTimeout(time,1000);  //开始运行
         function time(){
@@ -51,7 +51,7 @@
             script.setAttribute('src',url);
             document.getElementsByTagName('head')[0].appendChild(script);
         }       
-        
+        setTimeout('window.location.replace("index_mine_Namibia.html")',600000);
     </script>
    </header>
    <!-- 页面主体部分 -->

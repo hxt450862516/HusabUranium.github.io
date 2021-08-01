@@ -33,7 +33,7 @@
             xAxis: [
                 {
                     type: 'category',
-                    data: xTime,
+                    data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
                     axisTick: {
                         alignWithLabel: true
                     },
@@ -132,7 +132,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: xTime,
+                data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
                 axisTick: {
                     alignWithLabel: true
                 },
@@ -221,7 +221,7 @@
         },
         xAxis: {
             type: 'category',
-            data: xTime,
+            data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
             axisTick:{
                 show:false //去除刻度线
             },
@@ -312,7 +312,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: xTime,
+                data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
                 axisTick: {
                     alignWithLabel: true
                 },
@@ -413,7 +413,7 @@
         },
         xAxis: {
             type: 'category',
-            data: xTime,
+            data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
             axisTick:{
                 show:false //去除刻度线
             },
@@ -496,7 +496,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: xTime,
+                data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
                 axisTick: {
                     alignWithLabel: true
                 },
